@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+    agent { 
+    label 'windows'
 
     stages {
         stage('Checkout and Pull') {
@@ -8,10 +9,10 @@ pipeline {
                     // Navigirajte do direktorijuma sa vašim Git repozitorijumom
                     dir('C:\\Users\\vboxuser\\Documents\\New folder\\br') {
                         // Izvršite git checkout na master granu
-                        sh 'git checkout master'
+                        bat 'git checkout master'
 
                         // Povucite najnovije promene sa udaljenog repozitorijuma
-                        sh 'git pull'
+                        bat 'git pull'
                     }
                 }
             }
