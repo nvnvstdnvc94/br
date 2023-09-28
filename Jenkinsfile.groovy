@@ -27,6 +27,5 @@ pipeline {
             }
         }
 
-        // Dodajte ostale faze i korake za vašu Jenkins Pipeline
     }
 }
