@@ -1,7 +1,7 @@
 pipeline {
     agent { 
     label 'windows'
-
+}
     stages {
         stage('Checkout and Pull') {
             steps {
