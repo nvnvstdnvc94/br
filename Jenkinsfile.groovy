@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Navigirajte do direktorijuma sa vašim Git repozitorijumom
-                    dir('C:\\Users\\vboxuser\\Documents\\New folder\\prouft') {
+                    dir('C:\\Users\\vboxuser\\Documents\\New folder\\br') {
                         // Izvršite git checkout na master granu
                         sh 'git checkout master'
 
@@ -20,7 +20,7 @@ pipeline {
         stage('Run UFT Scenario') {
             steps {
                 uftScenarioLoad(
-                    testPaths: 'C:\\Users\\vboxuser\\Documents\\New folder\\prouft',
+                    testPaths: 'C:\\Users\\vboxuser\\Documents\\New folder\\br',
                     archiveTestResultsMode: 'doNotArchive'
                 )
             }
